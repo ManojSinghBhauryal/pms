@@ -2,6 +2,7 @@ import React from 'react';
 import '../App.css';
 
 const PropertyList = ({ list, handleEdit, handleDelete }) => {
+  console.log(list);
   return (
     <div>
       <h3>List of Properties</h3>
@@ -15,9 +16,9 @@ const PropertyList = ({ list, handleEdit, handleDelete }) => {
           </tr>
           {list.map((data) => (
             <tr key={data.id}>
-              <td>{data.name}</td>
-              <td className='description'>{data.desc}</td>
-              <td>{data.size}</td>
+              <td>{data.fields.name}</td>
+              <td className='description'>{data.fields.desc}</td>
+              <td>{data.fields.size}</td>
               <td className='modifyingButton'>
                 <button onClick={() => handleEdit(data)}>Edit</button>
                 <button onClick={() => handleDelete(data.id)}>Delete</button>

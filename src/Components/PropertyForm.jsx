@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-const PropertyForm = ({ edit, handleFormEdit, handleFormSubmit, name, desc, size, setName, setDesc, setSize, handleCloseForm }) => {
+const PropertyForm = ({ edit, handleFormEdit, handleFormSubmit, name, desc, size, setName, setDesc, setSize }) => {
   return (
     <>
       <div className='propertyFormMain'>
